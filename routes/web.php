@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PengenalanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,7 @@ Route::get('/belajar', function () {
     echo "<center> <u> <h1>HALO SEMUA</h1> </u> </center><br>";
     echo "<center> <u> <h1>Kami sedang belajar laravel dasar</h1> </u> </center>";
 });
+
 
 // Route basic lanjut ke view
 Route::get('/home', function () {
@@ -47,8 +49,16 @@ Route::get('/biodata/{nama}/{umur}/{alamat}/{jeniskelamin}/{kelas}/{hobby}',
 });
 
 //Route Optional Parameter
-Route::get('/pesanan/{makanan?}', 
-    function ($a= "Pesanan Anda Tidak Ada") {
-    return view('pages.pesanan', compact('a'));
+Route::get('/pesanan/{makanan?}/{makanan2}', 
+    function ($a= "Pesanan Anda Tidak Ada", $b= "Pesanan Anda Tidak Ada") {
+    return view('pages.pesanan', compact('a','b'));
 });
 
+
+//Passing data dari controller ke view
+Route::get('/pengenalan', [App\Http\Controllers\PengenalanController::class,'pengenalan']);
+
+//Passing data dinamis (route parameter) dari controller ke view
+Route::get('/intro/{nama}/{alamat}/{umur}', [App\Http\Controllers\PengenalanController::class,'intro']);
+
+Route::get('/siswa', [PengenalanController::class,'siswa']);

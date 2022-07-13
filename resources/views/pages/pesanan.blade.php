@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>MAKANAN</h2>
+    <h2>MENU</h2>
 
             Hallo Pesanan Anda : <b>{{$a}}</b>
             @if ($a == 'Ayam Goreng')
@@ -29,7 +29,27 @@
                 <br>
                 List harga tidak ada
             @endif
-    
+    <hr>
+            Hallo Pesanan Anda : <b>{{$b}}</b>
+            @if ($b == 'Ayam Goreng')
+                <br>
+                Harga {{ $b }} Rp.15000
+            @elseif ($b == 'Lobster')
+                <br>
+                Harga {{ $b }} Rp.20000
+            @elseif ($b == 'Pizza')
+                <br>
+                Harga {{ $b }} Rp.50000
+            @elseif ($b == 'Tiramisu')
+                <br>
+                Harga {{ $b }} Rp.30000
+            @elseif ($b == 'Pasta')
+                <br>
+                Harga {{ $b }} Rp.25000
+            @else
+                <br>
+                List harga tidak ada
+            @endif
 
 </body>
 </html>
