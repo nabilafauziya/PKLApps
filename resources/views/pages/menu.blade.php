@@ -11,8 +11,22 @@
         <legend>
             MENU
         </legend>
-
-        @foreach ($menu as $menu1)
+        @foreach ($post as $data)
+            <ul type="disc">
+                <li>{{ $data["beranda"] }}</li>
+                <li>{{ $data["berita"] }}</li>
+                @foreach ($data["kategori"] as $kategori)
+                    <ul type="square">
+                        <li>{{ $kategori["name"] }}</li>
+                        @foreach ($kategori["data"] as $item)
+                        <ul type="square">
+                            <li>{{ $item }}</li>
+                        </ul>
+                        @endforeach
+                    </ul>
+                @endforeach
+                <li>{{ $data["tentang"] }}</li>
+            </ul>
+        @endforeach
     </fieldset>
 </body>
-</html>

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PengenalanController;
+use App\Http\Controllers\LatihanController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -62,3 +64,5 @@ Route::get('/pengenalan', [App\Http\Controllers\PengenalanController::class,'pen
 Route::get('/intro/{nama}/{alamat}/{umur}', [App\Http\Controllers\PengenalanController::class,'intro']);
 
 Route::get('/siswa', [PengenalanController::class,'siswa']);
+Route::get('/menu', [LatihanController::class,'menu']);
+Route::get('/dosen',[LatihanController::class,'dosen']);
