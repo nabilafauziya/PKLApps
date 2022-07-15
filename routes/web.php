@@ -66,3 +66,4 @@ Route::get('/intro/{nama}/{alamat}/{umur}', [App\Http\Controllers\PengenalanCont
 Route::get('/siswa', [PengenalanController::class,'siswa']);
 Route::get('/menu', [LatihanController::class,'menu']);
 Route::get('/dosen',[LatihanController::class,'dosen']);
+Route::get('/tv', [LatihanController::class, 'tv']);
