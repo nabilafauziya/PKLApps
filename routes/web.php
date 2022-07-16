@@ -3,6 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PengenalanController;
 use App\Http\Controllers\LatihanController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\PesertaController;
+
+
+
 
 
 /*
@@ -67,3 +73,7 @@ Route::get('/siswa', [PengenalanController::class,'siswa']);
 Route::get('/menu', [LatihanController::class,'menu']);
 Route::get('/dosen',[LatihanController::class,'dosen']);
 Route::get('/tv', [LatihanController::class, 'tv']);
+Route::get('/post' ,[PostController::class,'index']);
+
+Route::get('/latihan' ,[SiswaController::class,'index']);
+Route::get('/latihan2' ,[PesertaController::class,'index']);
