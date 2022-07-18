@@ -6,6 +6,8 @@ use App\Http\Controllers\LatihanController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\PesertaController;
+use App\Http\Controllers\MapelController;
+use App\Http\Controllers\PengunjungController;
 
 
 
@@ -76,4 +78,7 @@ Route::get('/tv', [LatihanController::class, 'tv']);
 Route::get('/post' ,[PostController::class,'index']);
 
 Route::get('/latihan' ,[SiswaController::class,'index']);
-Route::get('/latihan2' ,[PesertaController::class,'index']);
+Route::get('/peserta' ,[PesertaController::class,'index']);
+Route::get('/mapel' , [MapelController::class,'index']);
+
+Route::get('/hotel' , [PengunjungController::class,'index']);

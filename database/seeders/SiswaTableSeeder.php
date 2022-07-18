@@ -23,3 +23,4 @@ class SiswaTableSeeder extends Seeder
     DB::table('siswa')->insert($a);
     }
 }
+

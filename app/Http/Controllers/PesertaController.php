@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Peserta;
 
 class PesertaController extends Controller
 {
     public function index() {
         $peserta = Peserta::all();
-        return view ('latihan.index' , compact('peserta'));
+        return view ('peserta.index' , compact('peserta'));
     }
 }

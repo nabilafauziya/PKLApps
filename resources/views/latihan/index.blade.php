@@ -7,9 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+
+<br>
     <fieldset>
         <legend>
-            Data Post
+            <h2>Data Post</h2>
         </legend>
         <table border="1" >
             <tr>
@@ -28,7 +30,54 @@
             </tr>
             @endforeach
         </table>
-    
+        <br>
     </fieldset>
+
+<br>
+    <fieldset>
+        <legend>
+            <h2>Peserta</h2>
+        </legend>
+        <table border="1" >
+            <tr>
+                <td>No Siswa</td>
+                <td>Kode MP</td>
+            </tr>
+            <?php $no=1 ?>
+            @foreach ($peserta as $datapeserta)
+            <tr>
+                <td>{{ $datapeserta['no'] }}</td>
+                <td>{{ $datapeserta['kode']}}</td>
+            </tr>
+            @endforeach
+        </table>
+        <br>
+    </fieldset>
+
+<br>
+    <fieldset>
+        <legend>
+            <h2>Mata Pelajaran</h2>
+        </legend>
+        <table border="1" >
+            <tr>
+                <td>Kode MP</td>
+                <td>Nama MP</td>
+                <td>SKS</td>
+                <td>SEMESTER</td>
+            </tr>
+            <?php $no=1 ?>
+            @foreach ($mapel as $datamapel)
+            <tr>
+                <td>{{ $datamapel['kode'] }}</td>
+                <td>{{ $datamapel['nama']}}</td>
+                <td>{{ $datamapel['sks']}}</td>
+                <td>{{ $datamapel['semester']}}</td>
+            </tr>
+            @endforeach
+        </table>
+        <br>
+    </fieldset>
+
 </body>
 </html>

@@ -17,6 +17,12 @@ class DatabaseSeeder extends Seeder
             PostTableSeeder::class,
             SiswaTableSeeder::class,
             PesertaTableSeeder::class,
+            MapelTableSeeder::class,
+            PengunjungTableSeeder::class,
+            TransaksiTableSeeder::class,
+            KaryawanTableSeeder::class,
+            DetailTableSeeder::class,
+            KamarTableSeeder::class,
         ]
         );
     }

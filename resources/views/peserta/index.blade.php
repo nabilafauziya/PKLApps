@@ -7,7 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-<table border="1" >
+    <fieldset>
+        <legend>
+            Peserta
+        </legend>
+        <table border="1" >
             <tr>
                 <td>No Siswa</td>
                 <td>Kode MP</td>
@@ -20,5 +24,6 @@
             </tr>
             @endforeach
         </table>
+    </fieldset>
 </body>
 </html>

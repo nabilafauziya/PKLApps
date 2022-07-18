@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSiswaTable extends Migration
+class CreateTransaksiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,16 @@ class CreateSiswaTable extends Migration
      */
     public function up()
     {
-        Schema::create('siswa', function (Blueprint $table) {
+        Schema::create('transaksi', function (Blueprint $table) {
             $table->id();
             $table->string('no')->uniqe();
-            $table->string('nama');
-            $table->string('jk');
-            $table->string('jurusan');
+            $table->string('pengunjung');
+            $table->string('karyawan');
+            $table->string('kamar');
+            $table->string('masuk');
+            $table->string('keluar');
+            $table->string('inap');
+            $table->string('harga');
             $table->timestamps();
         });
     }
@@ -30,7 +34,6 @@ class CreateSiswaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('siswa');
+        Schema::dropIfExists('transaksi');
     }
 }
-
