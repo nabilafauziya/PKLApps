@@ -8,6 +8,7 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\MapelController;
 use App\Http\Controllers\PengunjungController;
+use App\Http\Controllers\SlotController;
 
 
 
@@ -82,3 +83,13 @@ Route::get('/peserta' ,[PesertaController::class,'index']);
 Route::get('/mapel' , [MapelController::class,'index']);
 
 Route::get('/hotel' , [PengunjungController::class,'index']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+Route::resource('slot', SlotController::class);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+

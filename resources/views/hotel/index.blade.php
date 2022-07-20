@@ -97,9 +97,9 @@
 
         <table border="1" >
             <tr>
-                <td>ID Transaksi</td>
-                <td>No Transaksi</td>
                 <td>No Kamar</td>
+                <td>Jenis Kamar</td>
+                <td>Harga</td>
             </tr>
             <?php $no=1 ?>
             @foreach ($kamar as $e)
